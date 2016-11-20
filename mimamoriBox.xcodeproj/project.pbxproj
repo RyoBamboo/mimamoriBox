@@ -16,6 +16,7 @@
 		238807541DE207D400D3045A /* mimamoriBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238807531DE207D400D3045A /* mimamoriBoxTests.swift */; };
 		2388075F1DE207D400D3045A /* mimamoriBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388075E1DE207D400D3045A /* mimamoriBoxUITests.swift */; };
 		238807721DE20B2700D3045A /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238807711DE20B2700D3045A /* NavigationViewController.swift */; };
+		238807741DE20DC800D3045A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238807731DE20DC800D3045A /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2388075E1DE207D400D3045A /* mimamoriBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mimamoriBoxUITests.swift; sourceTree = "<group>"; };
 		238807601DE207D400D3045A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		238807711DE20B2700D3045A /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		238807731DE20DC800D3045A /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		2388076E1DE20A2500D3045A /* view */ = {
 			isa = PBXGroup;
 			children = (
+				238807731DE20DC800D3045A /* CustomButton.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				238807721DE20B2700D3045A /* NavigationViewController.swift in Sources */,
 				238807441DE207D400D3045A /* mimamoriBox.xcdatamodeld in Sources */,
 				2388073C1DE207D400D3045A /* AppDelegate.swift in Sources */,
+				238807741DE20DC800D3045A /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
