@@ -19,6 +19,8 @@
 		238807741DE20DC800D3045A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238807731DE20DC800D3045A /* CustomButton.swift */; };
 		2396BAAB1DE2122000672043 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396BAAA1DE2122000672043 /* User.swift */; };
 		2396BAAD1DE215F300672043 /* MyRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396BAAC1DE215F300672043 /* MyRealm.swift */; };
+		2396BAAF1DE224F500672043 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396BAAE1DE224F500672043 /* UserListTableViewCell.swift */; };
+		2396BAB11DE2270000672043 /* UserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396BAB01DE2270000672043 /* UserImageView.swift */; };
 		520B7AE9CC269D85C309D8B0 /* Pods_mimamoriBoxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5E418AE7C831925347C2F8 /* Pods_mimamoriBoxUITests.framework */; };
 		62885E3E949211A710F51D5B /* Pods_mimamoriBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A7B8A0B04E884BE22CDAE1 /* Pods_mimamoriBox.framework */; };
 		70A4B872DB615582BBE5AB62 /* Pods_mimamoriBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B69C1C7C5ACD508C13A26E /* Pods_mimamoriBoxTests.framework */; };
@@ -61,6 +63,8 @@
 		238807731DE20DC800D3045A /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		2396BAAA1DE2122000672043 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2396BAAC1DE215F300672043 /* MyRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRealm.swift; sourceTree = "<group>"; };
+		2396BAAE1DE224F500672043 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
+		2396BAB01DE2270000672043 /* UserImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserImageView.swift; sourceTree = "<group>"; };
 		3E254E7DA640288F6C08A39E /* Pods-mimamoriBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mimamoriBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-mimamoriBox/Pods-mimamoriBox.release.xcconfig"; sourceTree = "<group>"; };
 		64A7B8A0B04E884BE22CDAE1 /* Pods_mimamoriBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mimamoriBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		920AEB14A936137EBA85D477 /* Pods-mimamoriBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mimamoriBoxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mimamoriBoxTests/Pods-mimamoriBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				238807731DE20DC800D3045A /* CustomButton.swift */,
+				2396BAAE1DE224F500672043 /* UserListTableViewCell.swift */,
+				2396BAB01DE2270000672043 /* UserImageView.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -485,10 +491,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2396BAB11DE2270000672043 /* UserImageView.swift in Sources */,
 				2388073E1DE207D400D3045A /* UserListViewController.swift in Sources */,
 				238807721DE20B2700D3045A /* NavigationViewController.swift in Sources */,
 				2396BAAB1DE2122000672043 /* User.swift in Sources */,
 				2396BAAD1DE215F300672043 /* MyRealm.swift in Sources */,
+				2396BAAF1DE224F500672043 /* UserListTableViewCell.swift in Sources */,
 				238807441DE207D400D3045A /* mimamoriBox.xcdatamodeld in Sources */,
 				2388073C1DE207D400D3045A /* AppDelegate.swift in Sources */,
 				238807741DE20DC800D3045A /* CustomButton.swift in Sources */,

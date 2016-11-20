@@ -9,13 +9,11 @@ import RealmSwift
 
 class UserListViewController: UIViewController {
     
-    let realm :Realm = try! Realm()
-    let userList :Array<User> = []
-
+    let realm :Realm = try! Realm() // realmオブジェクト
+    let userList :Array<User> = []  // 全ユーザー
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         
         /*
         MyRealm.createUser("豊川幸枝", imgPath: "1.jpg.", address: "和歌山県岩出市山里164-4ヒイラギ岩出102号", phoneNumber: "0736610408", createdAt: NSDate())
@@ -30,9 +28,11 @@ class UserListViewController: UIViewController {
             realm.deleteAll()
         }
          */
+        
         // すべてのユーザを取得
         let userList = Array(realm.objects(User))
-        print(userList)
+        
+        // 画面の初期化
     }
 
     override func didReceiveMemoryWarning() {
