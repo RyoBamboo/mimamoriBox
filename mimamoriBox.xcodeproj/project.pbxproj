@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2388073C1DE207D400D3045A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388073B1DE207D400D3045A /* AppDelegate.swift */; };
+		2388073E1DE207D400D3045A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388073D1DE207D400D3045A /* ViewController.swift */; };
+		238807411DE207D400D3045A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2388073F1DE207D400D3045A /* Main.storyboard */; };
+		238807441DE207D400D3045A /* mimamoriBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 238807421DE207D400D3045A /* mimamoriBox.xcdatamodeld */; };
+		238807461DE207D400D3045A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238807451DE207D400D3045A /* Assets.xcassets */; };
+		238807491DE207D400D3045A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238807471DE207D400D3045A /* LaunchScreen.storyboard */; };
+		238807541DE207D400D3045A /* mimamoriBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238807531DE207D400D3045A /* mimamoriBoxTests.swift */; };
+		2388075F1DE207D400D3045A /* mimamoriBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388075E1DE207D400D3045A /* mimamoriBoxUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		238807501DE207D400D3045A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 238807301DE207D400D3045A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 238807371DE207D400D3045A;
+			remoteInfo = mimamoriBox;
+		};
+		2388075B1DE207D400D3045A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 238807301DE207D400D3045A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 238807371DE207D400D3045A;
+			remoteInfo = mimamoriBox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		238807381DE207D400D3045A /* mimamoriBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mimamoriBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2388073B1DE207D400D3045A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2388073D1DE207D400D3045A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		238807401DE207D400D3045A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		238807431DE207D400D3045A /* mimamoriBox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mimamoriBox.xcdatamodel; sourceTree = "<group>"; };
+		238807451DE207D400D3045A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		238807481DE207D400D3045A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2388074A1DE207D400D3045A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2388074F1DE207D400D3045A /* mimamoriBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mimamoriBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		238807531DE207D400D3045A /* mimamoriBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mimamoriBoxTests.swift; sourceTree = "<group>"; };
+		238807551DE207D400D3045A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2388075A1DE207D400D3045A /* mimamoriBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mimamoriBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2388075E1DE207D400D3045A /* mimamoriBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mimamoriBoxUITests.swift; sourceTree = "<group>"; };
+		238807601DE207D400D3045A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		238807351DE207D400D3045A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2388074C1DE207D400D3045A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238807571DE207D400D3045A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2388072F1DE207D400D3045A = {
+			isa = PBXGroup;
+			children = (
+				2388073A1DE207D400D3045A /* mimamoriBox */,
+				238807521DE207D400D3045A /* mimamoriBoxTests */,
+				2388075D1DE207D400D3045A /* mimamoriBoxUITests */,
+				238807391DE207D400D3045A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		238807391DE207D400D3045A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				238807381DE207D400D3045A /* mimamoriBox.app */,
+				2388074F1DE207D400D3045A /* mimamoriBoxTests.xctest */,
+				2388075A1DE207D400D3045A /* mimamoriBoxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2388073A1DE207D400D3045A /* mimamoriBox */ = {
+			isa = PBXGroup;
+			children = (
+				2388073B1DE207D400D3045A /* AppDelegate.swift */,
+				2388073D1DE207D400D3045A /* ViewController.swift */,
+				2388073F1DE207D400D3045A /* Main.storyboard */,
+				238807451DE207D400D3045A /* Assets.xcassets */,
+				238807471DE207D400D3045A /* LaunchScreen.storyboard */,
+				2388074A1DE207D400D3045A /* Info.plist */,
+				238807421DE207D400D3045A /* mimamoriBox.xcdatamodeld */,
+			);
+			path = mimamoriBox;
+			sourceTree = "<group>";
+		};
+		238807521DE207D400D3045A /* mimamoriBoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				238807531DE207D400D3045A /* mimamoriBoxTests.swift */,
+				238807551DE207D400D3045A /* Info.plist */,
+			);
+			path = mimamoriBoxTests;
+			sourceTree = "<group>";
+		};
+		2388075D1DE207D400D3045A /* mimamoriBoxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2388075E1DE207D400D3045A /* mimamoriBoxUITests.swift */,
+				238807601DE207D400D3045A /* Info.plist */,
+			);
+			path = mimamoriBoxUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		238807371DE207D400D3045A /* mimamoriBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238807631DE207D400D3045A /* Build configuration list for PBXNativeTarget "mimamoriBox" */;
+			buildPhases = (
+				238807341DE207D400D3045A /* Sources */,
+				238807351DE207D400D3045A /* Frameworks */,
+				238807361DE207D400D3045A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mimamoriBox;
+			productName = mimamoriBox;
+			productReference = 238807381DE207D400D3045A /* mimamoriBox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2388074E1DE207D400D3045A /* mimamoriBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238807661DE207D400D3045A /* Build configuration list for PBXNativeTarget "mimamoriBoxTests" */;
+			buildPhases = (
+				2388074B1DE207D400D3045A /* Sources */,
+				2388074C1DE207D400D3045A /* Frameworks */,
+				2388074D1DE207D400D3045A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				238807511DE207D400D3045A /* PBXTargetDependency */,
+			);
+			name = mimamoriBoxTests;
+			productName = mimamoriBoxTests;
+			productReference = 2388074F1DE207D400D3045A /* mimamoriBoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		238807591DE207D400D3045A /* mimamoriBoxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238807691DE207D400D3045A /* Build configuration list for PBXNativeTarget "mimamoriBoxUITests" */;
+			buildPhases = (
+				238807561DE207D400D3045A /* Sources */,
+				238807571DE207D400D3045A /* Frameworks */,
+				238807581DE207D400D3045A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2388075C1DE207D400D3045A /* PBXTargetDependency */,
+			);
+			name = mimamoriBoxUITests;
+			productName = mimamoriBoxUITests;
+			productReference = 2388075A1DE207D400D3045A /* mimamoriBoxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		238807301DE207D400D3045A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "竹之下遼";
+				TargetAttributes = {
+					238807371DE207D400D3045A = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 978RFFMTAV;
+					};
+					2388074E1DE207D400D3045A = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 978RFFMTAV;
+						TestTargetID = 238807371DE207D400D3045A;
+					};
+					238807591DE207D400D3045A = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 978RFFMTAV;
+						TestTargetID = 238807371DE207D400D3045A;
+					};
+				};
+			};
+			buildConfigurationList = 238807331DE207D400D3045A /* Build configuration list for PBXProject "mimamoriBox" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2388072F1DE207D400D3045A;
+			productRefGroup = 238807391DE207D400D3045A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				238807371DE207D400D3045A /* mimamoriBox */,
+				2388074E1DE207D400D3045A /* mimamoriBoxTests */,
+				238807591DE207D400D3045A /* mimamoriBoxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		238807361DE207D400D3045A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238807491DE207D400D3045A /* LaunchScreen.storyboard in Resources */,
+				238807461DE207D400D3045A /* Assets.xcassets in Resources */,
+				238807411DE207D400D3045A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2388074D1DE207D400D3045A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238807581DE207D400D3045A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		238807341DE207D400D3045A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2388073E1DE207D400D3045A /* ViewController.swift in Sources */,
+				238807441DE207D400D3045A /* mimamoriBox.xcdatamodeld in Sources */,
+				2388073C1DE207D400D3045A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2388074B1DE207D400D3045A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238807541DE207D400D3045A /* mimamoriBoxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238807561DE207D400D3045A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2388075F1DE207D400D3045A /* mimamoriBoxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		238807511DE207D400D3045A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 238807371DE207D400D3045A /* mimamoriBox */;
+			targetProxy = 238807501DE207D400D3045A /* PBXContainerItemProxy */;
+		};
+		2388075C1DE207D400D3045A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 238807371DE207D400D3045A /* mimamoriBox */;
+			targetProxy = 2388075B1DE207D400D3045A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2388073F1DE207D400D3045A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				238807401DE207D400D3045A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		238807471DE207D400D3045A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				238807481DE207D400D3045A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		238807611DE207D400D3045A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		238807621DE207D400D3045A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		238807641DE207D400D3045A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mimamoriBox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Univ.mimamoriBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		238807651DE207D400D3045A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mimamoriBox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Univ.mimamoriBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		238807671DE207D400D3045A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = mimamoriBoxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Univ.mimamoriBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mimamoriBox.app/mimamoriBox";
+			};
+			name = Debug;
+		};
+		238807681DE207D400D3045A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = mimamoriBoxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Univ.mimamoriBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mimamoriBox.app/mimamoriBox";
+			};
+			name = Release;
+		};
+		2388076A1DE207D400D3045A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = mimamoriBoxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Univ.mimamoriBoxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = mimamoriBox;
+			};
+			name = Debug;
+		};
+		2388076B1DE207D400D3045A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = mimamoriBoxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Univ.mimamoriBoxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = mimamoriBox;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		238807331DE207D400D3045A /* Build configuration list for PBXProject "mimamoriBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238807611DE207D400D3045A /* Debug */,
+				238807621DE207D400D3045A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		238807631DE207D400D3045A /* Build configuration list for PBXNativeTarget "mimamoriBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238807641DE207D400D3045A /* Debug */,
+				238807651DE207D400D3045A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		238807661DE207D400D3045A /* Build configuration list for PBXNativeTarget "mimamoriBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238807671DE207D400D3045A /* Debug */,
+				238807681DE207D400D3045A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		238807691DE207D400D3045A /* Build configuration list for PBXNativeTarget "mimamoriBoxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2388076A1DE207D400D3045A /* Debug */,
+				2388076B1DE207D400D3045A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		238807421DE207D400D3045A /* mimamoriBox.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				238807431DE207D400D3045A /* mimamoriBox.xcdatamodel */,
+			);
+			currentVersion = 238807431DE207D400D3045A /* mimamoriBox.xcdatamodel */;
+			path = mimamoriBox.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 238807301DE207D400D3045A /* Project object */;
+}
