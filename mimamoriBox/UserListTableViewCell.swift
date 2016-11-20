@@ -6,6 +6,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class UserListTableViewCell: UITableViewCell {
     
@@ -25,6 +26,9 @@ class UserListTableViewCell: UITableViewCell {
     }
     
     func setCell(user :User) {
-        
+        self.nameLabel?.text = user.name
+        self.addressLabel?.text = user.address
+        self.thumbnail?.sd_setImageWithURL(NSURL(string: "http://okame.prodrb.com/img/" + user.imgPath))
+
     }
 }
