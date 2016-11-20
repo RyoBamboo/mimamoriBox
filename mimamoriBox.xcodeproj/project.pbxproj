@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2388073C1DE207D400D3045A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388073B1DE207D400D3045A /* AppDelegate.swift */; };
-		2388073E1DE207D400D3045A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388073D1DE207D400D3045A /* ViewController.swift */; };
+		2388073E1DE207D400D3045A /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388073D1DE207D400D3045A /* UserListViewController.swift */; };
 		238807411DE207D400D3045A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2388073F1DE207D400D3045A /* Main.storyboard */; };
 		238807441DE207D400D3045A /* mimamoriBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 238807421DE207D400D3045A /* mimamoriBox.xcdatamodeld */; };
 		238807461DE207D400D3045A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238807451DE207D400D3045A /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		238807381DE207D400D3045A /* mimamoriBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mimamoriBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2388073B1DE207D400D3045A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2388073D1DE207D400D3045A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2388073D1DE207D400D3045A /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		238807401DE207D400D3045A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		238807431DE207D400D3045A /* mimamoriBox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mimamoriBox.xcdatamodel; sourceTree = "<group>"; };
 		238807451DE207D400D3045A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,13 +99,8 @@
 		2388073A1DE207D400D3045A /* mimamoriBox */ = {
 			isa = PBXGroup;
 			children = (
-				2388073B1DE207D400D3045A /* AppDelegate.swift */,
-				2388073D1DE207D400D3045A /* ViewController.swift */,
-				2388073F1DE207D400D3045A /* Main.storyboard */,
-				238807451DE207D400D3045A /* Assets.xcassets */,
-				238807471DE207D400D3045A /* LaunchScreen.storyboard */,
-				2388074A1DE207D400D3045A /* Info.plist */,
-				238807421DE207D400D3045A /* mimamoriBox.xcdatamodeld */,
+				2388076D1DE20A1B00D3045A /* resources */,
+				2388076C1DE20A1600D3045A /* src */,
 			);
 			path = mimamoriBox;
 			sourceTree = "<group>";
@@ -126,6 +121,51 @@
 				238807601DE207D400D3045A /* Info.plist */,
 			);
 			path = mimamoriBoxUITests;
+			sourceTree = "<group>";
+		};
+		2388076C1DE20A1600D3045A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				238807471DE207D400D3045A /* LaunchScreen.storyboard */,
+				2388073F1DE207D400D3045A /* Main.storyboard */,
+				2388073B1DE207D400D3045A /* AppDelegate.swift */,
+				238807701DE20A3000D3045A /* controller */,
+				2388076F1DE20A2C00D3045A /* model */,
+				2388076E1DE20A2500D3045A /* view */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		2388076D1DE20A1B00D3045A /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				238807451DE207D400D3045A /* Assets.xcassets */,
+				2388074A1DE207D400D3045A /* Info.plist */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		2388076E1DE20A2500D3045A /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		2388076F1DE20A2C00D3045A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				238807421DE207D400D3045A /* mimamoriBox.xcdatamodeld */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		238807701DE20A3000D3045A /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				2388073D1DE207D400D3045A /* UserListViewController.swift */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2388073E1DE207D400D3045A /* ViewController.swift in Sources */,
+				2388073E1DE207D400D3045A /* UserListViewController.swift in Sources */,
 				238807441DE207D400D3045A /* mimamoriBox.xcdatamodeld in Sources */,
 				2388073C1DE207D400D3045A /* AppDelegate.swift in Sources */,
 			);
