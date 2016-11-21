@@ -4,10 +4,18 @@
 //
 
 import UIKit
+import PageMenu
 
 class UserDetailViewController: UIViewController {
     
     var user: User! // リストで選択されたユーザ
+    
+    // PageMenu関係
+    var controllerArray: [UIViewController] = [] // PageMeneで使用するViewControllerの配列
+    var pageMenu: CAPSPageMenu?
+    var profileViewController: ProfileViewController!
+    var dayViewController: DayViewController!
+    @IBOutlet weak var pageMenuView: UIView! // PageMenuを貼り付けるView
     
     @IBOutlet weak var thumbnail: UserImageView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -30,6 +38,31 @@ class UserDetailViewController: UIViewController {
     func viewInit() {
         self.thumbnail?.sd_setImageWithURL(NSURL(string: "http://okame.prodrb.com/img/" + user.imgPath))
         self.userNameLabel.text = user.name
+        
+        /*-------------------------------------
+        * PageMenuの設定
+        *------------------------------------*/
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        profileViewController = storyboard.instantiateViewControllerWithIdentifier("Profile") as! ProfileViewController
+        dayViewController = storyboard.instantiateViewControllerWithIdentifier("Day") as! DayViewController
+        profileViewController.title = "プロフィール"
+        dayViewController.title = "見守り状況"
+        controllerArray.append(profileViewController)
+        controllerArray.append(dayViewController)
+        let parameters: [CAPSPageMenuOption] = [
+            .ScrollMenuBackgroundColor(UIColor.hexStr("#ffffff", alpha: 1.0)),
+            .UnselectedMenuItemLabelColor(UIColor.hexStr("#5d5d5d", alpha: 1.0)),
+            .SelectedMenuItemLabelColor(UIColor.hexStr("#58aea0", alpha: 1.0)),
+            .SelectionIndicatorColor(UIColor.hexStr("#58aea0", alpha: 1.0)),
+            .MenuItemSeparatorWidth(4.3),
+            .MenuItemSeparatorColor(UIColor.clearColor()),
+            .UseMenuLikeSegmentedControl(true),
+            .MenuHeight(50.0),
+            ]
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
+        
+        self.pageMenuView.addSubview(pageMenu!.view)
+        
     }
     
     

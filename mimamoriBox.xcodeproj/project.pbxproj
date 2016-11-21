@@ -22,6 +22,9 @@
 		2396BAAF1DE224F500672043 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396BAAE1DE224F500672043 /* UserListTableViewCell.swift */; };
 		2396BAB11DE2270000672043 /* UserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396BAB01DE2270000672043 /* UserImageView.swift */; };
 		23F4AFBC1DE280E500D040B5 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F4AFBB1DE280E500D040B5 /* UserDetailViewController.swift */; };
+		23F4AFBE1DE2C08C00D040B5 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F4AFBD1DE2C08C00D040B5 /* DayViewController.swift */; };
+		23F4AFC11DE2C29400D040B5 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F4AFC01DE2C29400D040B5 /* Extention.swift */; };
+		23F4AFC31DE2C43300D040B5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F4AFC21DE2C43300D040B5 /* ProfileViewController.swift */; };
 		520B7AE9CC269D85C309D8B0 /* Pods_mimamoriBoxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5E418AE7C831925347C2F8 /* Pods_mimamoriBoxUITests.framework */; };
 		62885E3E949211A710F51D5B /* Pods_mimamoriBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A7B8A0B04E884BE22CDAE1 /* Pods_mimamoriBox.framework */; };
 		70A4B872DB615582BBE5AB62 /* Pods_mimamoriBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B69C1C7C5ACD508C13A26E /* Pods_mimamoriBoxTests.framework */; };
@@ -67,6 +70,9 @@
 		2396BAAE1DE224F500672043 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		2396BAB01DE2270000672043 /* UserImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserImageView.swift; sourceTree = "<group>"; };
 		23F4AFBB1DE280E500D040B5 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		23F4AFBD1DE2C08C00D040B5 /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
+		23F4AFC01DE2C29400D040B5 /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
+		23F4AFC21DE2C43300D040B5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3E254E7DA640288F6C08A39E /* Pods-mimamoriBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mimamoriBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-mimamoriBox/Pods-mimamoriBox.release.xcconfig"; sourceTree = "<group>"; };
 		64A7B8A0B04E884BE22CDAE1 /* Pods_mimamoriBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mimamoriBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		920AEB14A936137EBA85D477 /* Pods-mimamoriBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mimamoriBoxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mimamoriBoxTests/Pods-mimamoriBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 				238807471DE207D400D3045A /* LaunchScreen.storyboard */,
 				2388073F1DE207D400D3045A /* Main.storyboard */,
 				2388073B1DE207D400D3045A /* AppDelegate.swift */,
+				23F4AFBF1DE2C27200D040B5 /* core */,
 				238807701DE20A3000D3045A /* controller */,
 				2388076F1DE20A2C00D3045A /* model */,
 				2388076E1DE20A2500D3045A /* view */,
@@ -202,8 +209,18 @@
 				238807711DE20B2700D3045A /* NavigationViewController.swift */,
 				2388073D1DE207D400D3045A /* UserListViewController.swift */,
 				23F4AFBB1DE280E500D040B5 /* UserDetailViewController.swift */,
+				23F4AFBD1DE2C08C00D040B5 /* DayViewController.swift */,
+				23F4AFC21DE2C43300D040B5 /* ProfileViewController.swift */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		23F4AFBF1DE2C27200D040B5 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				23F4AFC01DE2C29400D040B5 /* Extention.swift */,
+			);
+			name = core;
 			sourceTree = "<group>";
 		};
 		2FCC2AF30F34DF1A30E98788 /* Pods */ = {
@@ -496,12 +513,15 @@
 			files = (
 				2396BAB11DE2270000672043 /* UserImageView.swift in Sources */,
 				2388073E1DE207D400D3045A /* UserListViewController.swift in Sources */,
+				23F4AFBE1DE2C08C00D040B5 /* DayViewController.swift in Sources */,
 				238807721DE20B2700D3045A /* NavigationViewController.swift in Sources */,
+				23F4AFC11DE2C29400D040B5 /* Extention.swift in Sources */,
 				2396BAAB1DE2122000672043 /* User.swift in Sources */,
 				2396BAAD1DE215F300672043 /* MyRealm.swift in Sources */,
 				2396BAAF1DE224F500672043 /* UserListTableViewCell.swift in Sources */,
 				23F4AFBC1DE280E500D040B5 /* UserDetailViewController.swift in Sources */,
 				238807441DE207D400D3045A /* mimamoriBox.xcdatamodeld in Sources */,
+				23F4AFC31DE2C43300D040B5 /* ProfileViewController.swift in Sources */,
 				2388073C1DE207D400D3045A /* AppDelegate.swift in Sources */,
 				238807741DE20DC800D3045A /* CustomButton.swift in Sources */,
 			);
