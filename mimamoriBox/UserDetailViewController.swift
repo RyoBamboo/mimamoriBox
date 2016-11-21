@@ -72,6 +72,9 @@ class UserDetailViewController: UIViewController {
         
     }
     
+    @IBAction func callToUser(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "tel://" + user.phoneNumber)!)
+    }
     
 
 }

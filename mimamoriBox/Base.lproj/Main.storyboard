@@ -143,6 +143,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ6-Kp-xUG">
                                 <rect key="frame" x="146" y="548" width="82" height="82"/>
                                 <state key="normal" backgroundImage="iconCall"/>
+                                <connections>
+                                    <action selector="callToUser:" destination="2bg-Kp-dvV" eventType="touchUpInside" id="umq-z0-aIl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
