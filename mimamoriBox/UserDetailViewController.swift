@@ -43,8 +43,13 @@ class UserDetailViewController: UIViewController {
         * PageMenuの設定
         *------------------------------------*/
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
         profileViewController = storyboard.instantiateViewControllerWithIdentifier("Profile") as! ProfileViewController
+        profileViewController.user = user
+        
         dayViewController = storyboard.instantiateViewControllerWithIdentifier("Day") as! DayViewController
+        dayViewController.user = user
+        
         profileViewController.title = "プロフィール"
         dayViewController.title = "見守り状況"
         controllerArray.append(dayViewController)

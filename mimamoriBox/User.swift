@@ -11,6 +11,7 @@ class User: Object {
     dynamic var name: String = ""       // ユーザ名
     dynamic var imgPath: String = ""    // ユーザの画像
     dynamic var address: String = ""    // 住所
+    dynamic var birthDate: String = ""    // 誕生日
     dynamic var phoneNumber: String = ""     // 電話番号
     dynamic var createdAt: NSDate = NSDate() // 作成された日付
     

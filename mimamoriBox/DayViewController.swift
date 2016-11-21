@@ -9,6 +9,8 @@ import UIKit
 
 class DayViewController :UIViewController {
     
+    var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

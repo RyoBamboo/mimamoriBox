@@ -10,7 +10,7 @@ import RealmSwift
 
 class MyRealm {
     
-    class func createUser(name: String, imgPath: String, address: String, phoneNumber: String, createdAt: NSDate) {
+    class func createUser(name: String, imgPath: String, address: String, phoneNumber: String, birthDate: String,createdAt: NSDate) {
         
         let user = User()
         user.id          = NSUUID().UUIDString
@@ -18,6 +18,7 @@ class MyRealm {
         user.imgPath     = imgPath
         user.address     = address
         user.phoneNumber = phoneNumber
+        user.birthDate   = birthDate
         user.createdAt   = createdAt
         
         let realm = try! Realm()

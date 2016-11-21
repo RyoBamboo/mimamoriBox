@@ -228,6 +228,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="flw-0z-QUK" id="YXk-ef-ZEh"/>
+                        <outlet property="emailLabel" destination="01E-Uo-8VF" id="dnN-xV-wtP"/>
+                        <outlet property="phoneLabel" destination="Mvq-WU-B8M" id="5bg-c0-Imr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkl-Rg-lXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
