@@ -29,7 +29,11 @@ class ArchiveListTableViewCell :UITableViewCell {
     }
     
     func setCell(archiveByDay :Array<Archive>) {
-        print(archiveByDay)
+        
+        // ビューのリセット（これがないと表示に不具合
+        self.archiveImage1.image = UIImage(named: "iconUnChecked")
+        self.archiveImage2.image = UIImage(named: "iconUnChecked")
+        self.archiveImage3.image = UIImage(named: "iconUnChecked")
         
         let archiveCount = archiveByDay.count
         for var i = 1; i <= archiveCount; i += 1 {
