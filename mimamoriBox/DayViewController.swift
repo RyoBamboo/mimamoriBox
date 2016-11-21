@@ -97,6 +97,35 @@ class DayViewController :UIViewController, UITableViewDelegate, UITableViewDataS
         
         self.archivesTableView.reloadData()
         
+        /*------------------------------------
+         * 予測時刻を解析
+         *----------------------------------*/
+        // Pythonからの時刻を整形(yyyy/mm/dd 1100 => yyyy/mm/dd/ 11:00)
+        var predictTime = message.string!
+        let insertIdx = predictTime.endIndex.advancedBy(-2)
+        predictTime.insert(":", atIndex: insertIdx)
+        
+        // 整形した時刻の文字列からNSDateを生成
+        let testFormatter = NSDateFormatter()
+        //ロケールを設定する。
+        testFormatter.locale = NSLocale(localeIdentifier:"ja_JP")
+        //フォーマットを設定する。
+        testFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        //文字列をNSDateに変換する。
+        let predictDate = testFormatter.dateFromString(predictTime + ":00")
+        
+        // 現在時刻と比較
+        let now = NSDate()
+        let passed = predictDate!.timeIntervalSinceDate(now)
+        
+        // 何時間後か求める
+        let min = Int(passed / 60)
+        let hour = Int(min / 60)
+
+        print(hour)
+        
+        
+        
     }
     
     
