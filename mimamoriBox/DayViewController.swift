@@ -44,14 +44,18 @@ class DayViewController :UIViewController, UITableViewDelegate, UITableViewDataS
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexpath: NSIndexPath)->UITableViewCell {
         
+        let cellId = "cell" + String(indexpath.row)
+
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("ArchiveListTableViewCell") as! ArchiveListTableViewCell
         cell.setCell(archivesByDay[indexpath.row])
         
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-    }
+    
+    
+    
+    
 }
 

@@ -29,6 +29,7 @@ class ArchiveListTableViewCell :UITableViewCell {
     }
     
     func setCell(archiveByDay :Array<Archive>) {
+        print(archiveByDay)
         
         let archiveCount = archiveByDay.count
         for var i = 1; i <= archiveCount; i += 1 {

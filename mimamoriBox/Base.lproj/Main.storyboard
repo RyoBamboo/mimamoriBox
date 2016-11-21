@@ -184,11 +184,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="134.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconChecked" translatesAutoresizingMaskIntoConstraints="NO" id="AJH-RU-cMD">
-                                                    <rect key="frame" x="8" y="8" width="70" height="70"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconUnChecked" translatesAutoresizingMaskIntoConstraints="NO" id="AJH-RU-cMD">
+                                                    <rect key="frame" x="20" y="17" width="50" height="50"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconChecked" translatesAutoresizingMaskIntoConstraints="NO" id="REq-nH-E1r">
-                                                    <rect key="frame" x="132" y="8" width="70" height="70"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconUnChecked" translatesAutoresizingMaskIntoConstraints="NO" id="REq-nH-E1r">
+                                                    <rect key="frame" x="144" y="17" width="50" height="50"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconUnChecked" translatesAutoresizingMaskIntoConstraints="NO" id="MZA-09-ChW">
                                                     <rect key="frame" x="267" y="18" width="50" height="50"/>
@@ -317,7 +317,6 @@
     </scenes>
     <resources>
         <image name="iconCall" width="209" height="209"/>
-        <image name="iconChecked" width="150" height="150"/>
         <image name="iconEmail" width="31" height="23"/>
         <image name="iconHouse" width="31" height="31"/>
         <image name="iconPhone" width="30" height="33"/>
