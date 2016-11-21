@@ -28,7 +28,15 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // createSampleUser()
+         //createSampleUser()
+        /*
+         createSampleArchive("1")
+         createSampleArchive2("2")
+         createSampleArchive2("3")
+         createSampleArchive("4")
+         */
+        //deleteAll()
+        
         
         // すべてのユーザを取得
         userList = realm.objects(User)
@@ -86,10 +94,47 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
     // サンプルユーザを作成する関数
     func createSampleUser() {
         
-        MyRealm.createUser("豊川幸枝", imgPath: "1.jpg", address: "和歌山県岩出市山里164-4ヒイラギ岩出102号", phoneNumber: "0736610408", birthDate: "1920年11月23日", createdAt: NSDate())
-        MyRealm.createUser("杉村正次", imgPath: "2.jpg", address: "和歌山県和歌山市十三番丁30", phoneNumber: "0736610408", birthDate: "1923年3月10日", createdAt: NSDate(timeIntervalSinceNow: 9 * 60 * 60))
-        MyRealm.createUser("山本久雄", imgPath: "3.jpg", address: "徳島県名賀群豊崎町122", phoneNumber: "0736610408", birthDate: "1924年10月1日", createdAt: NSDate(timeIntervalSinceNow: 15 * 60 * 60))
-        MyRealm.createUser("重盛多美", imgPath: "4.jpg", address: "和歌山県和歌山市十三番丁30", phoneNumber: "0736610408", birthDate: "1922年5月19日", createdAt: NSDate(timeIntervalSinceNow: 25 * 60 * 60))
+        MyRealm.createUser("1", name: "豊川幸枝", imgPath: "1.jpg", address: "和歌山県岩出市山里164-4ヒイラギ岩出102号", phoneNumber: "0736610408", birthDate: "1920年11月23日", createdAt: NSDate())
+        MyRealm.createUser("2", name: "杉村正次", imgPath: "2.jpg", address: "和歌山県和歌山市十三番丁30", phoneNumber: "0736610408", birthDate: "1923年3月10日", createdAt: NSDate(timeIntervalSinceNow: 9 * 60 * 60))
+        MyRealm.createUser("3", name: "山本久雄", imgPath: "3.jpg", address: "徳島県名賀群豊崎町122", phoneNumber: "0736610408", birthDate: "1924年10月1日", createdAt: NSDate(timeIntervalSinceNow: 15 * 60 * 60))
+        MyRealm.createUser("4", name: "重盛多美", imgPath: "4.jpg", address: "和歌山県和歌山市十三番丁30", phoneNumber: "0736610408", birthDate: "1922年5月19日", createdAt: NSDate(timeIntervalSinceNow: 25 * 60 * 60))
+    }
+    
+    // サンプルアーカイブを作成する関数2
+    func createSampleArchive(userId: String) {
+        let now = NSDate()
+        
+        for i in 0 ..< 7 {
+            let day = Double(i)
+            
+            if ( i == 0) {
+                MyRealm.createArchive(userId, createdAt: NSDate(timeIntervalSinceNow: -6 * 60 * 60))
+                MyRealm.createArchive(userId, createdAt: now)
+            } else {
+                MyRealm.createArchive(userId, createdAt: NSDate(timeIntervalSinceNow: -day * 24 * 60 * 60))
+                MyRealm.createArchive(userId, createdAt: NSDate(timeIntervalSinceNow: -day * 26 * 60 * 60))
+                MyRealm.createArchive(userId, createdAt: NSDate(timeIntervalSinceNow: -day * 28  * 60 * 60))
+            }
+        }
+        
+    }
+    
+    // サンプルアーカイブを作成する関数2
+    func createSampleArchive2(userId: String) {
+        let now = NSDate()
+        
+        for i in 0 ..< 7 {
+            let day = Double(i)
+            
+            if ( i == 0) {
+                MyRealm.createArchive(userId, createdAt: now)
+            } else {
+                MyRealm.createArchive(userId, createdAt: NSDate(timeIntervalSinceNow: -day * 24 * 60 * 60))
+                MyRealm.createArchive(userId, createdAt: NSDate(timeIntervalSinceNow: -day * 26 * 60 * 60))
+                MyRealm.createArchive(userId, createdAt: NSDate(timeIntervalSinceNow: -day * 28  * 60 * 60))
+            }
+        }
+        
     }
     
     // すべてのデータを削除
