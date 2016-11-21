@@ -13,6 +13,7 @@ class DayViewController :UIViewController, UITableViewDelegate, UITableViewDataS
     let realm :Realm = try! Realm() // realmオブジェクト
     var user: User!
     var archives: Results<Archive>!
+    var archivesByDay: Array<Array<Archive>>!
     
     @IBOutlet weak var archivesTableView: UITableView!
     
@@ -21,6 +22,8 @@ class DayViewController :UIViewController, UITableViewDelegate, UITableViewDataS
         
         // ユーザのアーカイブを取得
         archives = MyRealm.getArchivesByUserId(user.id)
+        // アーカイブを日毎にグループ化
+        archivesByDay = MyRealm.sortArchivesByDay(archives)
         
         // アーカイブを表示するTableViewの設定
         archivesTableView.delegate = self
@@ -34,19 +37,15 @@ class DayViewController :UIViewController, UITableViewDelegate, UITableViewDataS
     
     // セクションの行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var rowCount = archives!.count / 3
-        if (archives!.count % 3 != 0) {
-            rowCount = rowCount + 1
-        }
         
-        return rowCount
+        return archivesByDay.count
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexpath: NSIndexPath)->UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("ArchiveListTableViewCell") as! ArchiveListTableViewCell
-        cell.setCell(archives[indexpath.row])
+        cell.setCell(archivesByDay[indexpath.row])
         
         return cell
     }

@@ -213,6 +213,14 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="archiveImage1" destination="AJH-RU-cMD" id="rrb-0j-0Un"/>
+                                            <outlet property="archiveImage2" destination="REq-nH-E1r" id="J8a-jc-Sd5"/>
+                                            <outlet property="archiveImage3" destination="MZA-09-ChW" id="Bb8-KO-AOK"/>
+                                            <outlet property="archiveLabel1" destination="4sQ-Z8-q82" id="1mp-6k-Z5x"/>
+                                            <outlet property="archiveLabel2" destination="6NE-Yn-rrh" id="e0x-Gk-BHm"/>
+                                            <outlet property="archiveLabel3" destination="77g-Va-Tqf" id="bWf-8S-JQ8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

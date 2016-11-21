@@ -59,4 +59,31 @@ class MyRealm {
         
         return archives
     }
+    
+    class func sortArchivesByDay(archives: Results<Archive>) -> Array<Array<Archive>> {
+        var archivesByDay: Array<Array<Archive>> = []
+        
+        let archivesCount = archives.count
+        
+        let format = NSDateFormatter()
+        format.dateFormat = "yyyy-MM-dd"
+        var tmpCreatedAt = format.stringFromDate(archives[0].createdAt) // 日付を整形
+        
+        var tmpArchivesArray: [Archive] = []
+        for i in 0 ..< archivesCount {
+            let createdAt = format.stringFromDate(archives[i].createdAt) // 日付を整形
+            if (createdAt == tmpCreatedAt) {
+                tmpArchivesArray.append(archives[i])
+            } else {
+                // 日付が変わったらachivesByDay配列に追加して、tmpArchivesArrayを初期化
+                archivesByDay.append(tmpArchivesArray) // 返り値の配列に追加
+                tmpCreatedAt = createdAt               // 日付を初期化
+                tmpArchivesArray = []                  // 一時保存用配列を初期化
+                tmpArchivesArray.append(archives[i])   // 新しい日付のアーカイブを保存
+            }
+        }
+        
+        
+        return archivesByDay
+    }
 }
