@@ -47,8 +47,9 @@ class UserDetailViewController: UIViewController {
         dayViewController = storyboard.instantiateViewControllerWithIdentifier("Day") as! DayViewController
         profileViewController.title = "プロフィール"
         dayViewController.title = "見守り状況"
-        controllerArray.append(profileViewController)
         controllerArray.append(dayViewController)
+        controllerArray.append(profileViewController)
+        let font:UIFont = UIFont(name:"HiraKakuProN-W6",size:15)!
         let parameters: [CAPSPageMenuOption] = [
             .ScrollMenuBackgroundColor(UIColor.hexStr("#ffffff", alpha: 1.0)),
             .UnselectedMenuItemLabelColor(UIColor.hexStr("#5d5d5d", alpha: 1.0)),
@@ -57,7 +58,8 @@ class UserDetailViewController: UIViewController {
             .MenuItemSeparatorWidth(4.3),
             .MenuItemSeparatorColor(UIColor.clearColor()),
             .UseMenuLikeSegmentedControl(true),
-            .MenuHeight(50.0),
+            .MenuHeight(40.0),
+            .MenuItemFont(font),
             ]
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
         
