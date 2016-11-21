@@ -8,6 +8,7 @@ target 'mimamoriBox' do
   # Pods for mimamoriBox
   pod 'RealmSwift'
   pod 'SDWebImage'
+  pod 'PageMenu'
 
   target 'mimamoriBoxTests' do
     inherit! :search_paths
