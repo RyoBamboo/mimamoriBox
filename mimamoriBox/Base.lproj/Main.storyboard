@@ -101,6 +101,58 @@
             </objects>
             <point key="canvasLocation" x="994.5" y="265.5"/>
         </scene>
+        <!--User Detail View Controller-->
+        <scene sceneID="E9j-4W-xjV">
+            <objects>
+                <viewController restorationIdentifier="UserDetailViewController" storyboardIdentifier="UserDetailViewController" id="2bg-Kp-dvV" customClass="UserDetailViewController" customModule="mimamoriBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wvF-1h-sOW"/>
+                        <viewControllerLayoutGuide type="bottom" id="JlY-XP-9WW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kuo-cY-L7T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sampleDetailBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="68d-NJ-msL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="181"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sampleUserImage" translatesAutoresizingMaskIntoConstraints="NO" id="mnu-k6-wLz" customClass="UserImageView" customModule="mimamoriBox" customModuleProvider="target">
+                                <rect key="frame" x="137" y="127" width="100" height="100"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="豊川幸枝" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xh-Vq-4aU">
+                                <rect key="frame" x="125" y="235" width="126" height="21"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ6-Kp-xUG">
+                                <rect key="frame" x="147" y="539" width="82" height="82"/>
+                                <state key="normal" backgroundImage="iconCall"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="thumbnail" destination="mnu-k6-wLz" id="2ci-hg-C0g"/>
+                        <outlet property="userNameLabel" destination="2Xh-Vq-4aU" id="Hi7-Xe-ezc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pjj-d9-MjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1400.5" y="265.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="0ox-Xk-enu">
             <objects>
@@ -122,6 +174,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="iconCall" width="209" height="209"/>
+        <image name="sampleDetailBackgroundImage" width="753" height="338"/>
         <image name="sampleUserImage" width="373" height="375"/>
     </resources>
 </document>
