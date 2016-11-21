@@ -1,4 +1,11 @@
 PODS:
+  - CocoaAsyncSocket (7.5.0):
+    - CocoaAsyncSocket/GCD (= 7.5.0)
+  - CocoaAsyncSocket/GCD (7.5.0)
+  - CocoaMQTT (1.0.9):
+    - CocoaAsyncSocket (~> 7.5.0)
+    - MSWeakTimer (~> 1.1.0)
+  - MSWeakTimer (1.1.0)
   - PageMenu (1.2.9)
   - Realm (2.0.2):
     - Realm/Headers (= 2.0.2)
@@ -10,16 +17,20 @@ PODS:
   - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
+  - CocoaMQTT
   - PageMenu
   - RealmSwift
   - SDWebImage
 
 SPEC CHECKSUMS:
+  CocoaAsyncSocket: 3baeb1ddd969f81cf9fca81053ae49ef2d1cbbfa
+  CocoaMQTT: 15585c953de917ec4357dfb57ad48519f74bc348
+  MSWeakTimer: 9426150f933b80ed3acf3f6d228e4b61f0e303c8
   PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
   Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
   RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: b72c0e477e96dcf7b4db05275a8fd3216c1f168d
+PODFILE CHECKSUM: 97aa1ce8e598dc948e69ed01181e5cf5f4c7eb21
 
 COCOAPODS: 1.0.1
