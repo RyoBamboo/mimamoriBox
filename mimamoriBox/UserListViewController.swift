@@ -28,13 +28,15 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         //createSampleUser()
+        //createSampleUser()
+        
         /*
          createSampleArchive("1")
          createSampleArchive2("2")
          createSampleArchive2("3")
          createSampleArchive("4")
          */
+        
         //deleteAll()
         
         
@@ -49,6 +51,9 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         // UINavigationControllerの背景を透明にする
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
+        
+        // UINavigationControllerのアイコンの色を白にする
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
     }
 
