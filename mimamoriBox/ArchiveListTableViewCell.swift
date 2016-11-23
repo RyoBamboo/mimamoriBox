@@ -39,18 +39,45 @@ class ArchiveListTableViewCell :UITableViewCell {
         self.archiveLabel3.text = ""
         
         let archiveCount = archiveByDay.count
-        for var i = 1; i <= archiveCount; i += 1 {
-            if (i == 1) {
-                self.archiveImage1.image = UIImage(named: "iconChecked")
-                self.archiveLabel1.text = getArchiveTime(archiveByDay[0].createdAt)
-            } else if (i == 2) {
-                self.archiveImage2.image = UIImage(named: "iconChecked")
-                self.archiveLabel2.text = getArchiveTime(archiveByDay[1].createdAt)
-            } else if (i == 3) {
-                self.archiveImage3.image = UIImage(named: "iconChecked")
-                self.archiveLabel3.text = getArchiveTime(archiveByDay[2].createdAt)
+        
+        // 期限が切れたアーカイブを判定する処理（汚すぎるので要修正）
+        let now = NSDate()
+        var passedTime = now.timeIntervalSinceDate(archiveByDay[0].createdAt) // 現在時刻との差分を求める
+        passedTime = passedTime / ( 60 * 60 )
+        if (passedTime > 24) {
+            // 一旦全部赤に変える
+            self.archiveImage1.image = UIImage(named: "iconWarning")
+            self.archiveImage2.image = UIImage(named: "iconWarning")
+            self.archiveImage3.image = UIImage(named: "iconWarning")
+            for var i = 1; i <= archiveCount; i += 1 {
+                if (i == 1) {
+                    self.archiveImage1.image = UIImage(named: "iconChecked")
+                    self.archiveLabel1.text = getArchiveTime(archiveByDay[0].createdAt)
+                } else if (i == 2) {
+                    self.archiveImage2.image = UIImage(named: "iconChecked")
+                    self.archiveLabel2.text = getArchiveTime(archiveByDay[1].createdAt)
+                } else if (i == 3) {
+                    self.archiveImage3.image = UIImage(named: "iconChecked")
+                    self.archiveLabel3.text = getArchiveTime(archiveByDay[2].createdAt)
+                }
+            }
+            
+        } else {
+            for var i = 1; i <= archiveCount; i += 1 {
+                if (i == 1) {
+                    self.archiveImage1.image = UIImage(named: "iconChecked")
+                    self.archiveLabel1.text = getArchiveTime(archiveByDay[0].createdAt)
+                } else if (i == 2) {
+                    self.archiveImage2.image = UIImage(named: "iconChecked")
+                    self.archiveLabel2.text = getArchiveTime(archiveByDay[1].createdAt)
+                } else if (i == 3) {
+                    self.archiveImage3.image = UIImage(named: "iconChecked")
+                    self.archiveLabel3.text = getArchiveTime(archiveByDay[2].createdAt)
+                }
             }
         }
+        
+        
         
     }
     
