@@ -9,6 +9,8 @@ import UIKit
 
 class ArchiveListTableViewCell :UITableViewCell {
     
+    @IBOutlet weak var dayLabel: UILabel!
+    
     @IBOutlet weak var archiveImage1: UIImageView!
     @IBOutlet weak var archiveImage2: UIImageView!
     @IBOutlet weak var archiveImage3: UIImageView!
@@ -31,12 +33,18 @@ class ArchiveListTableViewCell :UITableViewCell {
     func setCell(archiveByDay :Array<Archive>) {
         
         // ビューのリセット（これがないと表示に不具合
+        self.dayLabel.text = ""
         self.archiveImage1.image = UIImage(named: "iconUnChecked")
         self.archiveImage2.image = UIImage(named: "iconUnChecked")
         self.archiveImage3.image = UIImage(named: "iconUnChecked")
         self.archiveLabel1.text = ""
         self.archiveLabel2.text = ""
         self.archiveLabel3.text = ""
+        
+        
+        // 日付のラベルを設定
+        self.dayLabel.text = getArchiveDay(archiveByDay[0].createdAt)
+        
         
         let archiveCount = archiveByDay.count
         
@@ -98,6 +106,29 @@ class ArchiveListTableViewCell :UITableViewCell {
         let day = Int(hour / 24)
         return String(day) + "日前"
         
+    }
+    
+    // NSDateから日付と曜日を返す関数
+    func getArchiveDay(createdAt: NSDate) -> String {
+        
+        let cal: NSCalendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
+        let comp: NSDateComponents = cal.components(
+            [NSCalendarUnit.Weekday, NSCalendarUnit.Day],
+            fromDate: createdAt
+        )
+        let weekday: Int = comp.weekday
+        let weekdaySymbolIndex: Int = weekday - 1
+        let formatter: NSDateFormatter = NSDateFormatter()
+        formatter.locale = NSLocale(localeIdentifier: "ja")
+        
+        let weeklyStr = formatter.weekdaySymbols[weekdaySymbolIndex] // -> 日曜日
+        let dayStr    = String(comp.day)
+        
+        let dateStr = dayStr + "日（" + weeklyStr + "）"
+        
+        
+        return dateStr
+ 
     }
     
 }

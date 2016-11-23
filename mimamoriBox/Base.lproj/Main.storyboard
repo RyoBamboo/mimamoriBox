@@ -233,6 +233,7 @@
                                             <outlet property="archiveLabel1" destination="4sQ-Z8-q82" id="1mp-6k-Z5x"/>
                                             <outlet property="archiveLabel2" destination="6NE-Yn-rrh" id="e0x-Gk-BHm"/>
                                             <outlet property="archiveLabel3" destination="77g-Va-Tqf" id="bWf-8S-JQ8"/>
+                                            <outlet property="dayLabel" destination="ogs-9F-dQW" id="RQ4-ff-apI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -339,7 +340,7 @@
         <image name="iconEmail" width="31" height="23"/>
         <image name="iconHouse" width="31" height="31"/>
         <image name="iconPhone" width="30" height="33"/>
-        <image name="iconUnChecked" width="104" height="104"/>
+        <image name="iconUnChecked" width="124" height="124"/>
         <image name="sampleDetailBackgroundImage" width="753" height="338"/>
         <image name="sampleUserImage" width="373" height="375"/>
     </resources>
