@@ -17,8 +17,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        // ローカル通知を受け取る設定
+        let notiSettings = UIUserNotificationSettings(forTypes:[.Alert,.Sound,.Badge], categories:nil)
+        application.registerUserNotificationSettings(notiSettings)
+        application.registerForRemoteNotifications()
+        
         return true
     }
+    
+    
+    // 通知を受けた時の処理
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        //アプリがactive時に通知を発生させた時にも呼ばれる
+        if application.applicationState != .Active{
+            //バッジを０にする
+            application.applicationIconBadgeNumber = 0
+            //通知領域から削除する
+            application.cancelLocalNotification(notification)
+        }else{
+            //active時に通知が来たときはそのままバッジを0に戻す
+            if application.applicationIconBadgeNumber != 0{
+                application.applicationIconBadgeNumber = 0
+                application.cancelLocalNotification(notification)
+            }
+        }
+    }
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -33,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
     }
 
     func applicationWillEnterForeground(application: UIApplication) {

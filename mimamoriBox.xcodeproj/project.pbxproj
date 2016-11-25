@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2304580B1DE89C6600067080 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2304580A1DE89C6600067080 /* Notification.swift */; };
+		2304580D1DE8A29D00067080 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2304580C1DE8A29D00067080 /* DateUtils.swift */; };
 		2388073C1DE207D400D3045A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388073B1DE207D400D3045A /* AppDelegate.swift */; };
 		2388073E1DE207D400D3045A /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388073D1DE207D400D3045A /* UserListViewController.swift */; };
 		238807411DE207D400D3045A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2388073F1DE207D400D3045A /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		0A90BD94C21C7692C2D83262 /* Pods-mimamoriBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mimamoriBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mimamoriBox/Pods-mimamoriBox.debug.xcconfig"; sourceTree = "<group>"; };
+		2304580A1DE89C6600067080 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		2304580C1DE8A29D00067080 /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		238807381DE207D400D3045A /* mimamoriBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mimamoriBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2388073B1DE207D400D3045A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2388073D1DE207D400D3045A /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				23F4AFC01DE2C29400D040B5 /* Extention.swift */,
+				2304580A1DE89C6600067080 /* Notification.swift */,
+				2304580C1DE8A29D00067080 /* DateUtils.swift */,
 			);
 			name = core;
 			sourceTree = "<group>";
@@ -521,6 +527,7 @@
 				2388073E1DE207D400D3045A /* UserListViewController.swift in Sources */,
 				23F4AFBE1DE2C08C00D040B5 /* DayViewController.swift in Sources */,
 				238807721DE20B2700D3045A /* NavigationViewController.swift in Sources */,
+				2304580B1DE89C6600067080 /* Notification.swift in Sources */,
 				23F4AFC11DE2C29400D040B5 /* Extention.swift in Sources */,
 				2396BAAB1DE2122000672043 /* User.swift in Sources */,
 				2396BAAD1DE215F300672043 /* MyRealm.swift in Sources */,
@@ -529,6 +536,7 @@
 				238807441DE207D400D3045A /* mimamoriBox.xcdatamodeld in Sources */,
 				23F4AFC71DE2DF5200D040B5 /* Archive.swift in Sources */,
 				23F4AFC31DE2C43300D040B5 /* ProfileViewController.swift in Sources */,
+				2304580D1DE8A29D00067080 /* DateUtils.swift in Sources */,
 				2388073C1DE207D400D3045A /* AppDelegate.swift in Sources */,
 				23F4AFC51DE2DCF100D040B5 /* ArchiveListTableViewCell.swift in Sources */,
 				238807741DE20DC800D3045A /* CustomButton.swift in Sources */,

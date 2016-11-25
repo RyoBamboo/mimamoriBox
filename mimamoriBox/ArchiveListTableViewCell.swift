@@ -31,6 +31,7 @@ class ArchiveListTableViewCell :UITableViewCell {
     }
     
     func setCell(archiveByDay :Array<Archive>) {
+        print(archiveByDay)
         
         // 予想時刻があるかどうか取得
         let ud = NSUserDefaults.standardUserDefaults()
@@ -93,9 +94,25 @@ class ArchiveListTableViewCell :UITableViewCell {
                 } else if (i == 2) {
                     self.archiveImage2.image = UIImage(named: "iconChecked")
                     self.archiveLabel2.text = getArchiveTime(archiveByDay[1].createdAt)
+                    
+                    // デバッグ用（削除してよい）
+                    let dateString = DateUtils.stringFromDate(archiveByDay[1].createdAt, format: "yyyy-MM-dd HH:mm:ss")
+                    if (dateString == "1991-01-01 00:00:00") {
+                        self.archiveImage2.image = UIImage(named: "iconWarning")
+                        self.archiveLabel2.text = "未服用"
+                        self.archiveLabel2.textColor = UIColor.hexStr("#cf5066", alpha: 1.0)
+                    }
                 } else if (i == 3) {
                     self.archiveImage3.image = UIImage(named: "iconChecked")
                     self.archiveLabel3.text = getArchiveTime(archiveByDay[2].createdAt)
+                    
+                    // デバッグ用（削除してよい）
+                    let dateString = DateUtils.stringFromDate(archiveByDay[2].createdAt, format: "yyyy-MM-dd HH:mm:ss")
+                    if (dateString == "1991-01-01 00:00:00") {
+                        self.archiveImage2.image = UIImage(named: "iconWarning")
+                        self.archiveLabel2.text = "未服用"
+                        self.archiveLabel2.textColor = UIColor.hexStr("#cf5066", alpha: 1.0)
+                    }
                 }
             }
             

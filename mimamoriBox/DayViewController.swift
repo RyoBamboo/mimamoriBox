@@ -90,35 +90,62 @@ class DayViewController :UIViewController, UITableViewDelegate, UITableViewDataS
     func mqtt(mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16 ) {
         print("didReceivedMessage: \(message.string!) with id \(id)")
         
-        let archive: Archive = Archive()
-        archive.userId = "1"
-        archive.createdAt = NSDate()
-        archivesByDay[0].append(archive)
+        // デバッグ用通知（予定時刻を過ぎた設定）
+        if (message.string! == "0") {
+            let notif = UILocalNotification()
+            notif.fireDate = NSDate() //すぐに
+            notif.timeZone = NSTimeZone.defaultTimeZone()
+            notif.alertBody = user.name + "さんが予定時刻になっても薬を飲んでいません！"
+            notif.alertAction = "OK"
+            notif.applicationIconBadgeNumber = 1
+            notif.soundName = UILocalNotificationDefaultSoundName
+            UIApplication.sharedApplication().scheduleLocalNotification(notif)
+            
+            // 1999-01-01 00:00:00
+            let testFormatter = NSDateFormatter()
+            testFormatter.locale = NSLocale(localeIdentifier:"ja_JP")
+            testFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let expiredDate = testFormatter.dateFromString("1991-01-01 00:00:00")
+            
+            let archive: Archive = Archive()
+            archive.userId = "1"
+            archive.createdAt = expiredDate!
+            archivesByDay[0].append(archive)
+            
+            archivesTableView.reloadData()
+            
+        } else {
         
-        self.archivesTableView.reloadData()
-        
-        /*------------------------------------
-         * 予測時刻を解析
-         *----------------------------------*/
-        // Pythonからの時刻を整形(yyyy/mm/dd 1100 => yyyy/mm/dd/ 11:00)
-        var predictTime = message.string!
-        let insertIdx = predictTime.endIndex.advancedBy(-2)
-        predictTime.insert(":", atIndex: insertIdx)
-        
-        // 整形した時刻の文字列からNSDateを生成
-        let testFormatter = NSDateFormatter()
-        //ロケールを設定する。
-        testFormatter.locale = NSLocale(localeIdentifier:"ja_JP")
-        //フォーマットを設定する。
-        testFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
-        //文字列をNSDateに変換する。
-        let forecastDate = testFormatter.dateFromString(predictTime + ":00")
-        
-        // UserDefaultに保存
-        let ud = NSUserDefaults.standardUserDefaults()
-        ud.setObject(forecastDate, forKey: "forecastDate")
-        ud.synchronize()
-        
+            let archive: Archive = Archive()
+            archive.userId = "1"
+            archive.createdAt = NSDate()
+            archivesByDay[0].append(archive)
+            
+            self.archivesTableView.reloadData()
+            
+            /*------------------------------------
+             * 予測時刻を解析
+             *----------------------------------*/
+            // Pythonからの時刻を整形(yyyy/mm/dd 1100 => yyyy/mm/dd/ 11:00)
+            var predictTime = message.string!
+            let insertIdx = predictTime.endIndex.advancedBy(-2)
+            predictTime.insert(":", atIndex: insertIdx)
+            
+            // 整形した時刻の文字列からNSDateを生成
+            let testFormatter = NSDateFormatter()
+            //ロケールを設定する。
+            testFormatter.locale = NSLocale(localeIdentifier:"ja_JP")
+            //フォーマットを設定する。
+            testFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+            //文字列をNSDateに変換する。
+            let forecastDate = testFormatter.dateFromString(predictTime + ":00")
+            
+            // UserDefaultに保存
+            let ud = NSUserDefaults.standardUserDefaults()
+            ud.setObject(forecastDate, forKey: "forecastDate")
+            ud.synchronize()
+            
+        }
     }
     
     
