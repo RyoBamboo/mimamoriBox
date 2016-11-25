@@ -28,17 +28,32 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // createSampleUser()
         
+        /*-------------------------------
+         * デバッグ用の設定
+         *-----------------------------*/
+        // 予測時刻を2016/11/26/16:00と2016/11/26/20:00に設定
+        let testFormatter = NSDateFormatter()
+        testFormatter.locale = NSLocale(localeIdentifier:"ja_JP")
+        testFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        let forecastDate = testFormatter.dateFromString("2016/11/26 16:00:00")
+        let forecastDate2 = testFormatter.dateFromString("2016/11/26 20:00:00") // これは削除可能
+        
+        // UserDefaultに保存
+        let ud = NSUserDefaults.standardUserDefaults()
+        ud.setObject(forecastDate, forKey: "forecastDate")
+        ud.setObject(forecastDate2, forKey: "forecastDate2") // これは削除可能
+        ud.synchronize()
         
         /*
-         createSampleArchive("1")
-         createSampleArchive2("2")
-         createSampleArchive2("3")
-         createSampleArchive("4")
+        deleteAll()
+        createSampleUser()
+        createSampleArchive("1")
+        createSampleArchive2("2")
+        createSampleArchive2("3")
+        createSampleArchive("4")
  */
         
-        //deleteAll()
         
         
         // すべてのユーザを取得
@@ -115,7 +130,7 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
             
             if ( i == 0) {
                 MyRealm.createArchive(userId, createdAt: NSDate(timeIntervalSinceNow: -6 * 60 * 60))
-                MyRealm.createArchive(userId, createdAt: now)
+                //MyRealm.createArchive(userId, createdAt: now)
             } else {
                 MyRealm.createArchive(userId, createdAt: NSDate(timeIntervalSinceNow: -day * 24 * 60 * 60))
                 MyRealm.createArchive(userId, createdAt: NSDate(timeIntervalSinceNow: -day * 26 * 60 * 60))
