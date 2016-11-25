@@ -112,19 +112,12 @@ class DayViewController :UIViewController, UITableViewDelegate, UITableViewDataS
         //フォーマットを設定する。
         testFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
         //文字列をNSDateに変換する。
-        let predictDate = testFormatter.dateFromString(predictTime + ":00")
+        let forecastDate = testFormatter.dateFromString(predictTime + ":00")
         
-        // 現在時刻と比較
-        let now = NSDate()
-        let passed = predictDate!.timeIntervalSinceDate(now)
-        
-        // 何時間後か求める
-        let min = Int(passed / 60)
-        let hour = Int(min / 60)
-
-        print(hour)
-        
-        
+        // UserDefaultに保存
+        let ud = NSUserDefaults.standardUserDefaults()
+        ud.setObject(forecastDate, forKey: "forecastDate")
+        ud.synchronize()
         
     }
     
